@@ -1,0 +1,30 @@
+{
+  "$schema": "./genesis.schema.json",
+  "network": "3V30OS-GENESIS-UNMASK",
+  "genesisSeed": "ent-3v30os-genesis-unmask-ev0lverse-bleu-2026",
+  "alloy": {
+    "surface": "bright",
+    "grade": "Cr-7",
+    "label": "Genesis Chromium"
+  },
+  "notes": [
+    "The genesis seed is the network identity. Every entropy address, every generated mission, every mined fragment and the whole chromium theme derive from it.",
+    "Change the seed and you fork the network: same code, different universe, and no address collision with this one.",
+    "Precedence: ENTROPY_GENESIS_SEED env > existing data/entropy/genesis.json > this file > freshly generated random seed.",
+    "Committing this file makes handler addresses reproducible for integrators; the per-run data directory stays gitignored."
+  ],
+  "meta": {
+    "protocol": "ENTROPY",
+    "protocolVersion": "1.0.0",
+    "codename": "GENESIS UNMASK",
+    "owner": "3V30O Studios",
+    "unit": {
+      "symbol": "RLU",
+      "name": "Reality Unit",
+      "monetary": false,
+      "transferableOffNetwork": false,
+      "market": null,
+      "note": "Content accounting for mined reality. Not a currency, not a security, no market, no price."
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://3v30os.studio/schemas/entropy.genesis.v1.schema.json",
+  "title": "Entropy Genesis Document",
+  "description": "Network identity for an Entropy (Genesis Unmask) deployment. The genesisSeed is the root of every derived address, mission, fragment and theme.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["network", "genesisSeed"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "network": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9._-]{3,64}$",
+      "description": "Human network name, e.g. 3V30OS-GENESIS-UNMASK."
+    },
+    "genesisSeed": {
+      "type": "string",
+      "minLength": 8,
+      "maxLength": 256,
+      "description": "Root entropy. Deterministic across nodes; changing it forks the network."
+    },
+    "alloy": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "surface": { "type": "string", "enum": ["bright", "dusk", "scan"] },
+        "grade": { "type": "string", "enum": ["Cr-2", "Cr-3", "Cr-5", "Cr-6", "Cr-7", "Cr-9"] },
+        "label": { "type": "string", "maxLength": 80 }
+      }
+    },
+    "notes": { "type": "array", "items": { "type": "string" } },
+    "meta": {
+      "type": "object",
+      "properties": {
+        "protocol": { "type": "string", "const": "ENTROPY" },
+        "protocolVersion": { "type": "string" },
+        "codename": { "type": "string" },
+        "owner": { "type": "string" },
+        "unit": {
+          "type": "object",
+          "properties": {
+            "symbol": { "type": "string" },
+            "name": { "type": "string" },
+            "monetary": { "type": "boolean", "const": false },
+            "transferableOffNetwork": { "type": "boolean", "const": false },
+            "market": { "type": "null" },
+            "note": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}

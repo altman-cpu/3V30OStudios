@@ -38,3 +38,15 @@ dist/
 
 # Deployment artifacts (keep these for reference but sensitive info should be excluded)
 # deployments/*_latest.json excluded from repo but timestamped versions kept for audit trail
+
+# Entropy runtime state (regenerated from the genesis seed; contains a keyring)
+data/entropy/state/
+data/entropy/cas/
+data/entropy/journal.jsonl
+data/entropy/keyring.json
+data/entropy/genesis.json
+entropy/.env
+
+# The live document is served at /v1/openapi.json; only the CLI's explicit
+# --out target is ignored, so a committed snapshot stays possible.
+entropy/openapi.generated.json
