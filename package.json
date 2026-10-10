@@ -17,7 +17,12 @@
     "deploy:health": "hardhat run scripts/deployment_health_check.ts",
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "clean": "hardhat clean"
+    "clean": "hardhat clean",
+    "joey:install": "npm --prefix apps/joey-ortiz install",
+    "joey:dev": "npm --prefix apps/joey-ortiz run dev",
+    "joey:build": "npm --prefix apps/joey-ortiz run build",
+    "joey:test": "npm --prefix apps/joey-ortiz test",
+    "joey:typecheck": "npm --prefix apps/joey-ortiz run typecheck"
   },
   "dependencies": {
     "dotenv": "^16.3.1",

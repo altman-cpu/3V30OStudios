@@ -38,3 +38,6 @@ dist/
 
 # Deployment artifacts (keep these for reference but sensitive info should be excluded)
 # deployments/*_latest.json excluded from repo but timestamped versions kept for audit trail
+
+# TypeScript incremental build info
+*.tsbuildinfo
